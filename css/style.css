@@ -635,7 +635,7 @@ a {
 	box-sizing: border-box;
 	font-family: 'MaruBuri-Regular', cursive;
 	text-align: center;
-	width: 25rem;
+	max-width: 400rem;
 	gap: 1rem;
 	margin: 0 auto;
 	padding: 0 auto;
@@ -643,7 +643,7 @@ a {
 	position: relative;
 	background-color: #ffffff;
 	padding: 0.5rem 1rem;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	border-radius: 1rem;
 	transition: 0.3s ease;
   }
@@ -652,7 +652,7 @@ a {
 	box-sizing: border-box;
 	font-family: 'MaruBuri-Regular', cursive;
 	text-align: center;
-	width: 25rem;
+	max-width: 400rem;
 	gap: 1rem;
 	margin: 0 auto;
 	padding: 0 auto;
@@ -660,7 +660,7 @@ a {
 	position: relative;
 	background-color: #ffffff;
 	padding: 0.5rem 1rem;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	border-radius: 1rem;
 	transition: 0.3s ease;
   }
