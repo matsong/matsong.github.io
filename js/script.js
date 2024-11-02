@@ -1,21 +1,7 @@
-// JSDoc 주석
-/**
- * @author Esantomi <pilinnasa@gmail.com>
- */
-
-
 // 우측 버튼 비활성
 $(document).bind("contextmenu", function (e) {
     return false;
 });
-
-
-// 낙화 효과
-(function ($) {
-    "use strict";
-      $('.sakura-falling').sakura();
-})(jQuery);
-
 
 // Parallax 효과
 const images = document.getElementsByClassName('couple-drawing');
@@ -26,70 +12,70 @@ new simpleParallax(images, {
     scale: 1.1
 });
 
+document.querySelectorAll(".account").forEach((element) => {
+    element.addEventListener("click", () => {
+      const account = {
+        groom: "송현우 농협 3020324325551",
+        groomFather: "송영재 하나은행 03619262793",
+        groomMother: "장민순 아이엠뱅크 010080602331",
+        bride: "강민영 하나은행 86691031066107",
+        brideFather: "강석 농협 64512050298",
+        brideMother: "전희정 광주은행 146121880788",
+      }[element.id];
+  
+      navigator.clipboard.writeText(account).then(
+        () => {
+          alert("계좌번호를 복사했습니다.\n" + account);
+        },
+        () => {
+          alert("계좌번호를 복사하지 못했습니다.\n" + account);
+        }
+      );
+    });
+  });
 
-// 음악 토글
-var player = document.getElementById('player');
-     
-function togglePlayPause() {
-    if (player.paused) {
-        player.play();
-    } else {
-        player.pause();
-    }
-}
+  document.querySelectorAll(".link_url").forEach((element) => {
+    element.addEventListener("click", () => {
+      const link = {
+        url: "https://matsong.github.io"
+      }[element.id];
+  
+      navigator.clipboard.writeText(url).then(
+        () => {
+          alert("주소를 복사했습니다.\n" + link);
+        },
+        () => {
+          alert("주소를 복사하지 못했습니다.\n" + link);
+        }
+      );
+    });
+  });
 
+  const btns = document.querySelectorAll(".faq__btn");
 
-// // fslightbox를 활용한 갤러리 기능 (참고: "https://codepen.io/inpaSkyrim/pen/yLxBYNL")
-// function wrap(el) {
-//     const wrappingElement = document.createElement('a');
-//     wrappingElement.href = el.src;
-//     wrappingElement.setAttribute('data-fslightbox', 'gallery');
-    
-//     // class="gallery" 내부 elements만 가져오기
-//     if (el.closest('.gallery')) {
-//         el.parentElement.insertBefore(wrappingElement, el);
-//         wrappingElement.appendChild(el);
-//     }
-// }
-// document.querySelectorAll('img').forEach(el => {
-//     wrap(el);
-// })
-// // To incorporate new galleries or updates of existing ones (through adding or modifying <a> elements)
-// refreshFsLightbox();
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const faqItem = btn.parentNode;
+      const isActive = faqItem.classList.contains("active");
+  
+      removeActiveClasses();
+  
+      if (!isActive) {
+        faqItem.classList.add("active");
+      }
+    });
+  });
+  
+  function removeActiveClasses() {
+    btns.forEach((btn) => {
+      btn.parentNode.classList.remove("active");
+    });
+  }
 
-
-// 선물 예약 메시지
-$(document).ready(function () {
-    $(".gift-send").click(function () {
-        $("#gift-name").text($(this).data("name"));
-    })
-
-    $("#reserveGiftButton").click(function () {
-        let name = $("#sender-name").val();
-        let message = $("#sender-message").val();
-        $("#reserveGiftButton").text("전송 중...");
-        $("#reserveGiftButton").prop("disabled", true);
-
-        emailjs.init("laZD2hrfI3vsCPBU3");
-        emailjs.send("wedding-mail", "gift_send", {
-            name: name,
-            gift: $("#gift-name").text(),
-            message: message
-        }).then(function (response) {
-            $('#giftMailModal').modal('hide');
-            alert(name + " 님의 메시지가 성공적으로 전송되었습니다.");
-
-            $("#reserveGiftButton").text("예약 완료");
-            $("#sender-name").val('');
-            $("#sender-message").val('');
-            $("#reserveGiftButton").prop("disabled", true);
-        }, function (err) {
-            console.error("메시지 전송이 실패했습니다.", err);
-            alert("메시지 전송이 실패했습니다. 다시 시도해 주세요.");
-        });
-    })
-})
-
-
-// console log 출력
-console.log('우리 결혼합니다.');
+  Kakao.init("5e5b2918ca5dcf929543ebbfc543bd10");
+  
+  document.querySelector(".link").addEventListener("click", () => {
+    Kakao.Share.sendCustom({
+      templateId: 113829
+    });
+  });
