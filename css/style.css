@@ -648,23 +648,6 @@ a {
 	transition: 0.3s ease;
   }
 
-  .link_url {
-	box-sizing: border-box;
-	font-family: 'MaruBuri-Regular', cursive;
-	text-align: center;
-	max-width: 400rem;
-	gap: 1rem;
-	margin: 0 auto;
-	padding: 0 auto;
-	border: none;
-	position: relative;
-	background-color: #ffffff;
-	padding: 0.5rem 1rem;
-	font-size: 1.5rem;
-	border-radius: 1rem;
-	transition: 0.3s ease;
-  }
-
 @font-face {
 	font-family: 'MaruBuri-Regular';
     src: url('/assets/font/MaruBuri-Regular.otf');
