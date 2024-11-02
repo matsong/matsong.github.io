@@ -1,4 +1,4 @@
-// 우측 버튼 비활성
+ // 우측 버튼 비활성
 $(document).bind("contextmenu", function (e) {
     return false;
 });
