@@ -17,7 +17,7 @@ document.querySelectorAll(".account").forEach((element) => {
       const account = {
         groom: "송현우 농협 3020324325551",
         groomFather: "송영재 하나은행 03619262793",
-        groomMother: "장민순 아이엠뱅크 010080602331",
+        groomMother: "장민순 iM뱅크 010080602331",
         bride: "강민영 하나은행 86691031066107",
         brideFather: "강석 농협 64512050298",
         brideMother: "전희정 광주은행 146121880788",
