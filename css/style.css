@@ -337,6 +337,7 @@
 
 body {
 	font-family: Arial, Helvetica, Sans-serif;
+	overflow-x: hidden;
 }
 
 img {
@@ -345,14 +346,14 @@ img {
 }
 
 /* Swiper */
-@media (overflow-x:auto) {
+@media (max-width: 767px) {
 	.swiper-slide {
 	  height: auto;
 	}
 }
 
 .swiper-container {
-	overflow-x:auto
+	width: 90%;
 	margin: auto;
 	position: relative;
 }
