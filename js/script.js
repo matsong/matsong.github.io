@@ -34,24 +34,7 @@ document.querySelectorAll(".account").forEach((element) => {
     });
   });
 
-  document.querySelectorAll(".link_url").forEach((element) => {
-    element.addEventListener("click", () => {
-      const link = {
-        url: "https://matsong.github.io"
-      }[element.id];
-  
-      navigator.clipboard.writeText(url).then(
-        () => {
-          alert("주소를 복사했습니다.\n" + link);
-        },
-        () => {
-          alert("주소를 복사하지 못했습니다.\n" + link);
-        }
-      );
-    });
-  });
-
-  const btns = document.querySelectorAll(".faq__btn");
+  const btns = document.querySelectorAll(".faq__question");
 
   btns.forEach((btn) => {
     btn.addEventListener("click", () => {
