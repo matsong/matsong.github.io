@@ -361,6 +361,7 @@ img {
 
 .swiper-slide {
 	height: 75vh;
+	width: fit-content;
 }
 
 .swiper-slide img {
