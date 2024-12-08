@@ -63,7 +63,12 @@ document.querySelectorAll(".account").forEach((element) => {
     });
   });
 
-  const slide = new Swiper('#photobooth', {
+  const slide = new Swiper('.swiper-container', {
     slidesPerView : 'auto',
-    spaceBetween : 6, 
+    spaceBetween : 6,
+    loop : ture,
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      hide: true
+    }
   })
