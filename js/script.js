@@ -62,13 +62,3 @@ document.querySelectorAll(".account").forEach((element) => {
       templateId: 113829
     });
   });
-
-  const slide = new Swiper('.swiper-container', {
-    slidesPerView : 'auto',
-    spaceBetween : 6,
-    loop : ture,
-    scrollbar: {
-      el: '.swiper-scrollbar',
-      hide: true
-    }
-  })
