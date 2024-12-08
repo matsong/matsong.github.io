@@ -345,14 +345,14 @@ img {
 }
 
 /* Swiper */
-@media (max-width: 767px) {
+@media (overflow-x:auto) {
 	.swiper-slide {
 	  height: auto;
 	}
 }
 
 .swiper-container {
-	width: 90%;
+	overflow-x:auto
 	margin: auto;
 	position: relative;
 }
