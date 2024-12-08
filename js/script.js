@@ -62,3 +62,8 @@ document.querySelectorAll(".account").forEach((element) => {
       templateId: 113829
     });
   });
+
+  const slide = new Swiper('#photobooth', {
+    slidesPerView : 'auto',
+    spaceBetween : 6, 
+  })
