@@ -361,7 +361,7 @@ img {
 
 .swiper-slide {
 	height: 75vh;
-	width: fit-content;
+	width: fit-content; /* content가 overflow되어 mobile에서 x-scroll 있던 문제로 해결 */
 }
 
 .swiper-slide img {
@@ -470,7 +470,7 @@ img {
 	margin: 1rem 1rem 1rem;
 	letter-spacing: 2px;
 	line-height: 1.5;
-	font-size: 15px;
+	font-size: 18px;
 	word-break: keep-all;
 	text-align: center;
 }
@@ -481,7 +481,7 @@ img {
 	margin: 1rem 1rem 1rem;
 	letter-spacing: 2px;
 	line-height: 1.5;
-	font-size: 13px;
+	font-size: 18px;
 	word-break: keep-all;
 	text-align: left;
 }
@@ -491,7 +491,7 @@ img {
     color: black;
 	letter-spacing: 2px;
 	line-height: 1.8;
-	font-size: 15px;
+	font-size: 18px;
 	word-break: keep-all;
 	text-align: center;
 }
@@ -500,7 +500,7 @@ img {
 	font-family: 'MaruBuri-Regular', cursive;
 	font-weight: bolder;
 	font-style: normal;
-	font-size: 18px;
+	font-size: 25px;
 	color: #553830;
 	margin: 1rem 1rem 0rem;
 	text-align: center;
@@ -588,6 +588,7 @@ a {
   
   .faq__question {
 	padding: 1rem;
+	cursor: pointer;
   }
   
   .faq__title {
@@ -625,8 +626,8 @@ a {
 	top: 0.6rem;
 	right: 1rem;
 	border: 0;
-	border-radius: 50%;
-	font-size: 1.5rem;
+	border-radius: 100%;
+	font-size: 1.6rem;
   }
   
   .faq__btn:focus {
@@ -638,7 +639,7 @@ a {
   }
   
   .faq.active .faq__icon.close {
-	color: #ffffff;
+	color: #111111;
 	display: block;
   }
   
